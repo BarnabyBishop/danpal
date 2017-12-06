@@ -1,1 +1,1 @@
-![Dan Love](https://octodex.github.com/images/yaktocat.png)
+![Dan Love](public/images/dan-love.png)
