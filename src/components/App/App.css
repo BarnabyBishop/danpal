@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Lora:400i|Poiret+One');
+
+.App {
+}
+
+.App-logo {
+    height: 30px;
+    margin-top: 14px;
+}
+
+.App-header {
+    background-color: #f24141;
+    height: 60px;
+    padding: 0px 20px;
+    color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.App-content {
+    font-size: large;
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+}
+
+.post {
+    border-bottom: 1px dashed rgb(233, 233, 233);
+    padding: 10px;
+    margin: auto;
+    max-width: 500px;
+}
+
+.text::after {
+  content: '\2022';
+  display: block;
+  color: #555;
+}
+.post-title {
+    font-size: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    font-family: 'Montserrat';
+}
+
+.danbot {
+    width: 100px;
+}
+
+blockquote {
+    font-family: Lora;
+    font-style: italic;
+    display: inline-block;
+    border-left: solid 3px #f24141;
+    padding-left: 10px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    position: relative;
+}
+
+blockquote span {
+    position: absolute;
+    bottom: -30px;
+    right: -5%;
+    font-size: 18px;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
