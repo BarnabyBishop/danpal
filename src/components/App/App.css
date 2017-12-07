@@ -82,8 +82,389 @@ blockquote span {
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
-    }
+  }
     to {
         transform: rotate(360deg);
-    }
+  }
+}
+
+.bot {
+    margin-top: 5vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 90vh;
+    min-height: 400px;
+    margin-bottom: 10vh;
+}
+.container h1 {
+    color: #ca3642;
+    font-family: Bungee;
+    margin: 0;
+    font-size: 5vh;
+}
+.container[data-theme="blue"] h1 {
+    color: #3469c7;
+}
+.container[data-theme="orange"] h1 {
+    color: #e17007;
+}
+.container p {
+    margin: 1em 0 2em;
+    opacity: 0.5;
+    line-height: 1.4;
+    text-align: center;
+}
+#dan {
+    position: relative;
+    display: inline-block;
+    height: 80vh;
+    min-height: 300px;
+    max-height: 650px;
+    background: rgba(0,0,0,0);
+}
+#dan span {
+    display: block;
+    width: 20%;
+    position: absolute;
+    border-radius: 50%;
+    background: #ca3642;
+    color: #fff;
+    top: 0;
+    font-family: 'Permanent Marker', cursive;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+}
+[data-theme="blue"] #dan span {
+    background: #3469c7;
+}
+[data-theme="orange"] #dan span {
+    background: #e17007;
+}
+#dan span::before {
+    display: block;
+    content: '';
+    padding-top: 100%;
+}
+#dan span i {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 3vh;
+    line-height: 0.9;
+    font-style: normal;
+}
+@media (min-height: 1200px) {
+    #dan span i {
+      font-size: 24px;
+  }
+}
+#dan > img {
+    height: 75%;
+}
+#dan .part {
+    position: absolute;
+    margin: auto;
+    color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: contain;
+    text-indent: -9999px;
+}
+#dan .head {
+    height: 18%;
+    width: 20%;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-transform-origin: 50% 80%;
+            transform-origin: 50% 80%;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-red-head.png");
+    z-index: 1;
+}
+[data-theme="blue"] #dan .head {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-blue-head.png");
+}
+[data-theme="orange"] #dan .head {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-orange-head.png");
+}
+#dan .neck {
+    height: 3%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 14%;
+    height: 6.5%;
+    width: 20%;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-neck.png");
+}
+#dan .torso {
+    left: 0;
+    right: 0;
+    height: 45%;
+    width: 50%;
+    top: 17%;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-tee-black.png");
+    z-index: 1;
+}
+#dan .crotch {
+    top: 58.5%;
+    width: 50%;
+    height: 9%;
+    left: 1%;
+    right: 0;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-crotch.png");
+}
+#dan .arm,
+#dan .leg {
+    width: 10%;
+    left: 15%;
+    height: 55%;
+    top: 17.5%;
+}
+#dan .arm--right {
+    left: auto;
+    width: 10%;
+    right: -15%;
+}
+#dan .arm {
+    left: 25%;
+    z-index: 2;
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+}
+#dan .arm__top,
+#dan .arm__bottom {
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+    width: 100%;
+}
+#dan .arm__top {
+    height: 50%;
+    top: 11.5%;
+    width: 120%;
+    left: -10%;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-left-arm-top.png");
+}
+#dan .arm--right .arm__top {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-right-arm-top.png");
+}
+#dan .arm__bottom {
+    top: 65%;
+    height: 80%;
+    width: 160%;
+    left: -5%;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-left-arm-bottom.png");
+}
+#dan .arm--right .arm__bottom {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-right-arm-bottom.png");
+    right: -10%;
+    left: auto;
+}
+#dan .leg {
+    height: 41%;
+    top: 62.5%;
+    left: 31%;
+    width: 19%;
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+}
+#dan .leg--right {
+    left: auto;
+    right: 31%;
+}
+#dan .leg__top {
+    width: 100%;
+    height: 50%;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-left-leg-top.png");
+}
+#dan .leg--right .leg__top {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-right-leg-top.png");
+}
+#dan .leg__bottom {
+    position: absolute;
+    left: 10%;
+    right: 0;
+    top: 90%;
+    height: 90%;
+    width: 100%;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-right-leg-bottom.png");
+}
+#dan .leg--left .leg__bottom {
+    margin-right: 15%;
+    left: 0;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-left-leg-bottom.png");
+}
+#dan .leg__shoe {
+    width: 150%;
+    top: 90%;
+    height: 40%;
+    left: 0;
+    right: -20%;
+    margin-right: 0%;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-red-left-shoe.png");
+}
+[data-theme="blue"] #dan .leg__shoe {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-blue-left-shoe.png");
+}
+[data-theme="orange"] #dan .leg__shoe {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-orange-left-shoe.png");
+}
+#dan .leg--right .leg__shoe {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-red-right-shoe.png");
+    right: -30%;
+}
+[data-theme="blue"] #dan .leg--right .leg__shoe {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-blue-right-shoe.png");
+}
+[data-theme="orange"] #dan .leg--right .leg__shoe {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/dan-orange-right-shoe.png");
+}
+.head {
+    -webkit-animation: swing5 alternate linear infinite 1s;
+            animation: swing5 alternate linear infinite 1s;
+}
+.leg--right {
+    -webkit-animation: swing3rev alternate linear infinite 3s;
+            animation: swing3rev alternate linear infinite 3s;
+}
+.leg--left {
+    -webkit-animation: swing3 alternate linear infinite 3s;
+            animation: swing3 alternate linear infinite 3s;
+}
+.arm--left {
+    -webkit-animation: swing3 alternate linear infinite 2s;
+            animation: swing3 alternate linear infinite 2s;
+}
+.arm--right {
+    -webkit-animation: swing3 alternate linear infinite 2s;
+            animation: swing3 alternate linear infinite 2s;
+}
+.arm--left .arm__bottom {
+    -webkit-animation: swing5 alternate linear infinite 2s;
+            animation: swing5 alternate linear infinite 2s;
+}
+.arm--right .arm__bottom {
+    -webkit-animation: swing5 alternate linear infinite 2s;
+            animation: swing5 alternate linear infinite 2s;
+}
+.leg--left .leg__bottom {
+    -webkit-animation: swing3 alternate linear infinite 3s;
+            animation: swing3 alternate linear infinite 3s;
+}
+.leg--right .leg__bottom {
+    -webkit-animation: swing3rev alternate linear infinite 3s;
+            animation: swing3rev alternate linear infinite 3s;
+}
+@-webkit-keyframes swing3 {
+    from {
+      -webkit-transform: rotate(-3deg);
+              transform: rotate(-3deg);
+  }
+    to {
+      -webkit-transform: rotate(3deg);
+              transform: rotate(3deg);
+  }
+}
+@keyframes swing3 {
+    from {
+      -webkit-transform: rotate(-3deg);
+              transform: rotate(-3deg);
+  }
+    to {
+      -webkit-transform: rotate(3deg);
+              transform: rotate(3deg);
+  }
+}
+@-webkit-keyframes swing3rev {
+    from {
+      -webkit-transform: rotate(3deg);
+              transform: rotate(3deg);
+  }
+    to {
+      -webkit-transform: rotate(-3deg);
+              transform: rotate(-3deg);
+  }
+}
+@keyframes swing3rev {
+    from {
+      -webkit-transform: rotate(3deg);
+              transform: rotate(3deg);
+  }
+    to {
+      -webkit-transform: rotate(-3deg);
+              transform: rotate(-3deg);
+  }
+}
+@-webkit-keyframes swing5 {
+    from {
+      -webkit-transform: rotate(-5deg);
+              transform: rotate(-5deg);
+  }
+    to {
+      -webkit-transform: rotate(5deg);
+              transform: rotate(5deg);
+  }
+}
+@keyframes swing5 {
+    from {
+      -webkit-transform: rotate(-5deg);
+              transform: rotate(-5deg);
+  }
+    to {
+      -webkit-transform: rotate(5deg);
+              transform: rotate(5deg);
+  }
+}
+@-webkit-keyframes swing5rev {
+    from {
+      -webkit-transform: rotate(5deg);
+              transform: rotate(5deg);
+  }
+    to {
+      -webkit-transform: rotate(-5deg);
+              transform: rotate(-5deg);
+  }
+}
+@keyframes swing5rev {
+    from {
+      -webkit-transform: rotate(5deg);
+              transform: rotate(5deg);
+  }
+    to {
+      -webkit-transform: rotate(-5deg);
+              transform: rotate(-5deg);
+  }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import DanBot from '../DanBot';
 
 export const Quote = props => {
     return (
@@ -42,6 +43,8 @@ export default class Post extends React.Component {
                                 return <Quote data={block} />;
                             case 'Text':
                                 return <div className="text">{block.text}</div>;
+                            case 'Bot':
+                                return <DanBot />
                             default:
                                 return <div>Bah?</div>;
                         }

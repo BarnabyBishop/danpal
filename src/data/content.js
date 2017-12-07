@@ -1,5 +1,13 @@
 export const content = [
     {
+        title: 'DanBot3000 (beta)',
+        content: [
+            {
+                type: 'Bot'
+            },
+        ]
+    },
+    {
         title: 'Fun Times',
         content: [
             {
